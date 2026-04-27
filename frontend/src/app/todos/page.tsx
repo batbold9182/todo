@@ -13,7 +13,7 @@ export default function Home() {
   const [editName, setEditName] = useState("");
 
   useEffect(()=> {
-    fetch("${process.env.NEXT_PUBLIC_API_URL}/data", {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/data`, {
       headers: {
         "Authorization": `Bearer ${localStorage.getItem("token")}`,
       },
@@ -26,7 +26,7 @@ export default function Home() {
   function addTodos(){
     if (!name.trim()) return;
 
-  fetch("${process.env.NEXT_PUBLIC_API_URL}/data", {
+  fetch(`${process.env.NEXT_PUBLIC_API_URL}/data`, {
     method: "POST",
     headers: {
       "Authorization": `Bearer ${localStorage.getItem("token")}`,
