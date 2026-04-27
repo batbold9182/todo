@@ -1,0 +1,139 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: var(--bg);
+  padding: 60px 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 540px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--fg);
+}
+
+.inputRow {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.input {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 15px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  outline: none;
+  background: #fff;
+  color: var(--fg);
+}
+
+.input:focus {
+  border-color: var(--fg);
+}
+
+.addBtn {
+  padding: 10px 20px;
+  background: var(--fg);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.addBtn:hover {
+  background: #333;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  gap: 8px;
+}
+
+.todoName {
+  font-size: 15px;
+  color: var(--fg);
+  flex: 1;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.editBtn,
+.deleteBtn,
+.saveBtn,
+.cancelBtn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.editBtn {
+  background: #f0f0f0;
+  color: var(--fg);
+}
+
+.editBtn:hover {
+  background: #e0e0e0;
+}
+
+.deleteBtn {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.deleteBtn:hover {
+  background: #fecaca;
+}
+
+.saveBtn {
+  background: var(--fg);
+  color: #fff;
+}
+
+.saveBtn:hover {
+  background: #333;
+}
+
+.cancelBtn {
+  background: #f0f0f0;
+  color: var(--fg);
+}
+
+.cancelBtn:hover {
+  background: #e0e0e0;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 24px;
+  }
+}
