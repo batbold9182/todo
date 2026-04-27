@@ -1,12 +1,13 @@
 {
-  "projects": [
-    {
-      "src": "frontend",
-      "use": "@vercel/next"
-    },
-    {
-      "src": "backend",
-      "use": "@vercel/node"
+    "experimentalServices": {
+        "frontend": {
+            "entrypoint": "frontend",
+            "routePrefix": "/",
+            "framework": "nextjs"
+        },
+        "backend": {
+            "entrypoint": "backend",
+            "routePrefix": "/_/backend"
+        }
     }
-  ]
 }
