@@ -13,7 +13,7 @@ export default function Home() {
   const [editName, setEditName] = useState("");
 
   useEffect(()=> {
-    fetch("http://localhost:5000/data", {
+    fetch("${process.env.NEXT_PUBLIC_API_URL}/data", {
       headers: {
         "Authorization": `Bearer ${localStorage.getItem("token")}`,
       },
@@ -26,7 +26,7 @@ export default function Home() {
   function addTodos(){
     if (!name.trim()) return;
 
-  fetch("http://localhost:5000/data", {
+  fetch("${process.env.NEXT_PUBLIC_API_URL}/data", {
     method: "POST",
     headers: {
       "Authorization": `Bearer ${localStorage.getItem("token")}`,
@@ -45,7 +45,7 @@ export default function Home() {
     .catch((err) => console.log(err));
   }
   function deleteTodos(id: number){
-    fetch(`http://localhost:5000/data/${id}`,{
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/data/${id}`,{
       method: "DELETE",
       headers: {
         "Authorization": `Bearer ${localStorage.getItem("token")}`,
@@ -57,7 +57,7 @@ export default function Home() {
     .catch((err)=>console.log(err));
   }
   function updateTodos(id:number){
-    fetch(`http://localhost:5000/data/${id}`, {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/data/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
