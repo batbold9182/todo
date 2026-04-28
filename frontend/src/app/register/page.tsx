@@ -19,9 +19,11 @@ export default function Register() {
         const data = await res.json();
         if(res.ok){
             console.log("success");
+            alert("Successfully created");
             router.push("/login");
         } else {
-            console.log(data.message)
+            console.log(data.message);
+            alert("Failed to signup");
         }
         
     }

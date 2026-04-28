@@ -23,9 +23,9 @@ export default function Login() {
             router.push("/todos");
         } else {
             console.log(data.message);
+            alert("Wrong password or mail");
         }
-        
-        
+           
     }
 
   return (
